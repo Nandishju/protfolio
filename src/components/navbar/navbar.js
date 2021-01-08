@@ -1,226 +1,219 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import { About } from '../about';
-import { Blogs } from '../blogs';
-import { Contact } from '../contact';
-import { Products } from '../products';
-import { Work } from '../work';
+import React, { Component } from "react";
+import { NavLink, Link } from "react-router-dom";
+
+import styled from "styled-components";
+// import { About } from '../about';
+// import { Blogs } from '../blogs';
+// import { Contact } from '../contact';
+// import { Products } from '../products';
+// import { Work } from '../work';
 import './navbar.scss'
 
 
-export default class NavBar extends React.Component {
+const Navigation = styled.header`
+  width: 100%;
+  border-bottom: 10px solid #222;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 100px 0;
+  height: 140px;
+  margin-bottom: 60px;
+  background: #f8f8f8;
 
+  .logo a {
+    padding-top: 33px;
+    display: flex;
+    flex-direction: column;
+    clear: both;
+    padding-bottom: 30px;
+    text-decoration: none;
+
+    p {
+      width: 500px;
+      display: block;
+    }
+    em {
+      font-size: 0.5em;
+      float: left;
+      display: block;
+      img {
+        display: inline-block;
+        margin-top: 5px;
+        width: 15px;
+        float: left;
+      }
+      .letterhead {
+        display: inline-block;
+        line-height: 260%;
+        float: left;
+      }
+    }
+  }
+  .gray {
+    color: #ccc;
+  }
+  a {
+    color: #222;
+    opacity: 0.55;
+    transition: all 0.6s;
+    color: #222;
+    font-size: 1em;
+  }
+  a:hover {
+    opacity: 1;
+  }
+  .fa-bars {
+    display: none;
+    color: #222;
+    font-size: 2rem;
+  }
+  nav {
+    ul {
+      display: flex;
+      justify-content: space-between;
+    }
+    li {
+      margin: 0 15px;
+      justify-content: space-between;
+      font-size: 1em;
+    }
+    a {
+      font-size: 1em;
+      text-decoration: none;
+      .active {
+        color: tomato;
+      }
+    }
+    a.active {
+      color: #222;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    padding: 0px;
+    .logo {
+      padding-left: 15px;
+      padding-top: 0px !important;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    height: auto;
+    min-height: 50px;
+    display: block;
+    position: relative;
+    .logo {
+      width: 100%;
+      display: block;
+      padding-top: 20px;
+      margin: 0px;
+      margin-left: -5px;
+      a {
+        padding: 20px 0px;
+      }
+    }
+    .fa-bars {
+      display: inline-block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+    ul.collapsed {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      overflow: hidden;
+      max-height: 0;
+      -moz-transition-duration: 0.4s;
+      -webkit-transition-duration: 0.4s;
+      -o-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+      -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+      -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+      -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+      transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+      &.is-expanded {
+        overflow: hidden;
+        max-height: 500px; /* approximate max height */
+        -moz-transition-duration: 0.4s;
+        -webkit-transition-duration: 0.4s;
+        -o-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        -moz-transition-timing-function: ease-in;
+        -webkit-transition-timing-function: ease-in;
+        -o-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+      }
+      li {
+        padding: 15px 10px;
+        margin: 0px 0px;
+        width: 100%;
+      }
+    }
+  }
+`;
+
+export default class NavBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isExpanded: false
+    };
+  }
+  handleToggle(e) {
+    e.preventDefault();
+    this.setState({
+      isExpanded: !this.state.isExpanded
+    });
+  }
 
   render() {
+    const { isExpanded } = this.state;
+
     return (
-      <div>
-        <Router>
-               <div class="wrapper">
-          <header id="header" class="header">
-            <div class="container" id="header-inner">
-              <div class="row">
-
-                <div id="header-left" class="clearfix">
-                  <div id="logo" class="logo">
-                    <a href="#">
-                      <img src=""
-                        alt="logo" id="logo-img" class="logo-img" height="35" width="150" />
-                    </a>
-                  </div>
-                </div>
-
-                <div id="header-right">
-                  <nav class="navbar navbar-default" id="">
-
-                    <div class="navbar-header">
-                      <a class="navbar-brand" href="#">Portfolio</a>
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                    </div>
-
-
-                    <div class="gnav collapse navbar-collapse" id="navbar-main">
-                      <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown active">
-                        <Link to="/contact">About</Link>
-                          {/* <a class="" data-toggle="dropdown" href="#about">About <i></i></a> */}
-
-                          <ul class="dropdown-menu">
-                            <li>
-                              <a class="" href='#'>Graduation<i class=""></i></a>
-                              <ul class="sub-dropdown">
-                                <li><a href="#">Major</a></li>
-                                <li><a href="#">Minor</a></li>
-                              </ul>
-                            </li>
-                            <li>
-                              <a class="" href='#'>School <i class=""></i></a>
-                              <ul class="sub-dropdown">
-                                <li><a href="#">Secondary</a></li>
-                                <li><a href="#">Primary</a></li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </li>
-                        <li class="dropdown">
-                          <a class="" data-toggle="dropdown" href="#blogs">Blogs <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                          <ul class="dropdown-menu">
-                            <li>
-                              <a class="" href='#'>Technical <i class=""></i></a>
-                              <ul class="sub-dropdown">
-                                <li><a href="#">JS</a></li>
-                                <li><a href="#">React</a></li>
-                                <li><a href="#">Vue</a></li>
-                              </ul>
-                            </li>
-                            <li>
-                              <a class="" href='#'>Non Tech <i class=""></i></a>
-                              <ul class="sub-dropdown">
-                                <li><a href="#">Arts</a></li>
-                                <li><a href="#">Health</a></li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </li>
-                        <li class="dropdown">
-                          <a class="" data-toggle="dropdown" href="#work">Work <i></i></a>
-                          <ul class="dropdown-menu">
-                            <li><a class="" href='#'>Prof Experice</a></li>
-                            <li><a class="" href='#'>Personal learning</a></li>
-                          </ul>
-                        </li>
-                        <li class="dropdown">
-                          <a class="" data-toggle="dropdown" href="#products">Products <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                          <ul class="dropdown-menu">
-                            <li>
-                              <a class="" href='#'>Technical <i class=""></i></a>
-                              <ul class="sub-dropdown">
-                                <li><a href="#">Simple</a></li>
-                                <li><a href="#">Moderate</a></li>
-                              </ul>
-                            </li>
-                            <li>
-                              <a class="" href='#'>Non Tech <i class=""></i></a>
-                              <ul class="sub-dropdown">
-                                <li><a href="#">General</a></li>
-                                <li><a href="#">Specific</a></li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </li>
-                        <li class="dropdown">
-                          <a class="" data-toggle="dropdown" href="#contact">contact <i></i></a>
-                          <ul class="dropdown-menu">
-                            <li><a class="" href='#'>Primary</a></li>
-                            <li><a class="" href='#'>Secondary</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
-
-                  </nav>
-                </div>
-              </div>
-            </div>
-
-          </header>
-
-
+      <Navigation>
+        <div className="logo">
+          <Link to="/">
+            <p>Portfolio</p>
+            
+          </Link>
         </div>
-        <Switch>
-                <Route exact path="/about">
-                  <About />
-                </Route>
-                <Route path="/blogs">
-                  <Blogs />
-                </Route>
-                <Route path="/contact">
-                  <Contact />
-                </Route>
-                <Route path="/products">
-                  <Products />
-                </Route>
-                <Route path="/work">
-                  <Work />
-                </Route>
-              </Switch>
-
-       </Router> <div>
-          {false &&
-            <Router>
-              <nav id='nav'>
-                <div class="nav-center">
-
-                  <div class="nav-header">
-                    <img src="./logo.svg" alt="logo" class="logo" />
-                    <button class="nav-toggle">
-                      <div class="fas fa-bars">
-
-                      </div>
-                    </button>
-                  </div>
-                  <div class="links-container">
-                    <ul className="links">
-                      <li>
-                        <Link to="/">About</Link>
-                      </li>
-                      <li>
-                        <Link to="/blogs">blog</Link>
-                      </li>
-                      <li>
-                        <Link to="/contact">contact</Link>
-                      </li>
-                      <li>
-                        <Link to="/products">products</Link>
-                      </li>
-                      <li>
-                        <Link to="/work">work</Link>
-                      </li>
-                    </ul>
-
-                  </div>
-                </div>
-              </nav>
-
-
-              {/*
-          A <Switch> looks through all its children <Route>
-          elements and renders the first one whose path
-          matches the current URL. Use a <Switch> any time
-          you have multiple routes, but you want only one
-          of them to render at a time
-        */}
-              <Switch>
-                <Route exact path="/">
-                  <About />
-                </Route>
-                <Route path="/blogs">
-                  <Blogs />
-                </Route>
-                <Route path="/contact">
-                  <Contact />
-                </Route>
-                <Route path="/products">
-                  <Products />
-                </Route>
-                <Route path="/work">
-                  <Work />
-                </Route>
-              </Switch>
-
-            </Router>
-
-          }
-        </div>
-      </div>
+        <nav className="nav">
+          <i
+            className="fa fa-bars"
+            aria-hidden="true"
+            onClick={e => this.handleToggle(e)}
+          />
+          <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
+           
+            
+            <NavLink activeClassName="active" to="/blogs">
+              <li>blogs</li>
+            </NavLink>
+            <NavLink activeClassName="active" to="/about">
+              <li>about</li>
+            </NavLink>
+            <NavLink activeClassName="active" to="/products">
+              <li>products</li>
+            </NavLink>
+            <NavLink activeClassName="active" to="/contact">
+              <li>contact</li>
+            </NavLink>
+          </ul>
+        </nav>
+      </Navigation>
     );
   }
 }
+
+
+
+
+
+
