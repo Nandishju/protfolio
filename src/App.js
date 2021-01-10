@@ -4,6 +4,7 @@ import NavBar from './components/navbar/navbar'
 import { RoutesComp } from './components/RoutesComp/RoutesComp'
 import './App.scss';
 import { AppContent } from './components/appcontent/AppContent';
+import ScrollToTop from './components/scrolltotop/scrolltotop'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
@@ -11,9 +12,10 @@ function App() {
     <div className="App">
       <Router>
         <NavBar></NavBar>
-        <conatiner className="appContainer">
+        <div className="appContainer">
           <RoutesComp></RoutesComp>
-        </conatiner>
+          <ScrollToTop />          
+        </div>
       </Router>
 
     </div>

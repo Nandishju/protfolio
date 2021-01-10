@@ -17,21 +17,23 @@ const Navigation = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 100px 0;
+  padding: 0px 50px 0;
   height: 140px;
-  margin-bottom: 60px;
-  background: #f8f8f8;
-
+  //margin-bottom: 60px;
+  background-image: url('https://images.unsplash.com/photo-1500043204644-768d20653f32?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
   .logo a {
+    font-size:xxx-large;
     padding-top: 33px;
     display: flex;
     flex-direction: column;
     clear: both;
     padding-bottom: 30px;
     text-decoration: none;
-
+    color:white !important;
+    opacity:1;
+  
     p {
-      width: 500px;
+      width: 50%;
       display: block;
     }
     em {
@@ -55,31 +57,35 @@ const Navigation = styled.header`
     color: #ccc;
   }
   a {
-    color: #222;
+    color: white;
     opacity: 0.55;
     transition: all 0.6s;
-    color: #222;
     font-size: 1em;
+    opacity:1;
   }
   a:hover {
     opacity: 1;
   }
   .fa-bars {
     display: none;
-    color: #222;
+    color: white;
     font-size: 2rem;
   }
   nav {
+    //position:sticky;
     ul {
       display: flex;
       justify-content: space-between;
+      list-style:none
     }
     li {
+      text-transform:capitalize;
       margin: 0 15px;
       justify-content: space-between;
       font-size: 1em;
     }
     a {
+      color:white;
       font-size: 1em;
       text-decoration: none;
       .active {
@@ -87,7 +93,9 @@ const Navigation = styled.header`
       }
     }
     a.active {
-      color: #222;
+      color: white;
+      font-weight:900;
+      opacity:1;
     }
   }
 
@@ -98,7 +106,7 @@ const Navigation = styled.header`
       padding-top: 0px !important;
     }
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 800px) {
     height: auto;
     min-height: 50px;
     display: block;
@@ -116,7 +124,7 @@ const Navigation = styled.header`
     .fa-bars {
       display: inline-block;
       position: absolute;
-      top: 10px;
+      top: 40px;
       right: 10px;
       cursor: pointer;
     }
@@ -181,7 +189,7 @@ export default class NavBar extends React.Component {
         <div className="logo">
           <Link to="/">
             <p>Portfolio</p>
-            
+
           </Link>
         </div>
         <nav className="nav">
@@ -191,13 +199,13 @@ export default class NavBar extends React.Component {
             onClick={e => this.handleToggle(e)}
           />
           <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
-           
-            
+
+
             <NavLink activeClassName="active" to="/blogs">
               <li>blogs</li>
             </NavLink>
-            <NavLink activeClassName="active" to="/about">
-              <li>about</li>
+            <NavLink activeClassName="active" to="/work">
+              <li>work</li>
             </NavLink>
             <NavLink activeClassName="active" to="/products">
               <li>products</li>

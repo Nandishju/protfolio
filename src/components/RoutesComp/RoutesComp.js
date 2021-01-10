@@ -12,8 +12,8 @@ import { Products } from '../products'
 import { Work } from '../work'
 export const RoutesComp =(props)=>{
 return(<> 
-<Route exact={true} path="/" component={Work} />
-<Route exaxt path="/about" component={About} />
+<Route exact={true} path="/" component={About} />
+<Route exaxt path="/work" component={Work} />
 <Route exact path="/contact" component={Contact} />
 <Route exaxt path="/blogs" component={Blogs}/>
 <Route exaxt path="/products" component={Products}/></>)
