@@ -3,6 +3,8 @@ import { RoutesComp } from './components/RoutesComp/RoutesComp'
 import './App.scss';
 import ScrollToTop from './components/scrolltotop/scrolltotop'
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
