@@ -1,9 +1,9 @@
 import logo from './logo.svg';
-import { Button } from './components/common/styledComponents'
+// import { Button } from './components/common/styledComponents'
 import NavBar from './components/navbar/navbar'
 import { RoutesComp } from './components/RoutesComp/RoutesComp'
 import './App.scss';
-import { AppContent } from './components/appcontent/AppContent';
+// import { AppContent } from './components/appcontent/AppContent';
 import ScrollToTop from './components/scrolltotop/scrolltotop'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
