@@ -1,16 +1,22 @@
-import logo from './logo.svg';
-import {Button} from './components/common/styledComponents'
 import NavBar from './components/navbar/navbar'
-import './App.css';
+import { RoutesComp } from './components/RoutesComp/RoutesComp'
+import './App.scss';
+import ScrollToTop from './components/scrolltotop/scrolltotop'
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <Router>
         <NavBar></NavBar>
-          <Button>Click</Button>
-        
-      </header>
+        <div className="appContainer">
+          <RoutesComp></RoutesComp>
+          <ScrollToTop />          
+        </div>
+      </Router>
+
     </div>
   );
 }
