@@ -4,7 +4,7 @@ import { NavLink, Link } from "react-router-dom";
 import styled from "styled-components";
 // import { About } from '../about';
 // import { Blogs } from '../blogs';
-// import { Contact } from '../contact';
+// import { Skills } from '../Skills';
 // import { Products } from '../products';
 // import { Work } from '../work';
 import './navbar.scss'
@@ -205,13 +205,16 @@ export default class NavBar extends React.Component {
               <li>blogs</li>
             </NavLink>
             <NavLink activeClassName="active" to="/work">
-              <li>work</li>
+              <li>experience</li>
+            </NavLink>            
+            <NavLink activeClassName="active" to="/Skills">
+              <li>skills</li>
             </NavLink>
+            <NavLink activeClassName="active" to="/education">
+            <li>education</li>
+          </NavLink>
             <NavLink activeClassName="active" to="/products">
               <li>products</li>
-            </NavLink>
-            <NavLink activeClassName="active" to="/contact">
-              <li>contact</li>
             </NavLink>
           </ul>
         </nav>

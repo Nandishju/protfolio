@@ -11,10 +11,10 @@ function App() {
     <div className="App">
       <Router>
         <NavBar></NavBar>
-        <div className="appContainer">
+       
           <RoutesComp></RoutesComp>
           <ScrollToTop />          
-        </div>
+      
       </Router>
 
     </div>
