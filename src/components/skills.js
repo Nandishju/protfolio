@@ -25,7 +25,7 @@ const skillsData = [{
   "rating": "50%"
 }]
 export const Skills = (props) => {
-  return (<div className="skills-page">
+  return (<div className="container skills-page">
     <div className="content">
       <h1>My Skills</h1>
       {skillsData.map(item => {
