@@ -1,6 +1,6 @@
 import react from 'react';
 export const About = (props) => {
-    return (<div className="container">Hi I am abount!
+    return (<div className="container">Hi I am about!
         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt porro quidem libero officia commodi
         necessitatibus non rem pariatur, assumenda exercitationem animi quaerat amet laborum totam praesentium eum
         doloribus mollitia.

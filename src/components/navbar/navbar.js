@@ -9,18 +9,80 @@ import styled from "styled-components";
 // import { Work } from '../work';
 import './navbar.scss'
 
+export default class NavBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isExpanded: false
+    };
+  }
+  handleToggle(e) {
+    e.preventDefault();
+    this.setState({
+      isExpanded: !this.state.isExpanded
+    });
+  }
+
+  render() {
+    const { isExpanded } = this.state;
+
+    return (
+      <Navigation>
+        <div className="logo">
+          <Link to="/">
+            <p>Portfolio</p>
+
+          </Link>
+        </div>
+        <nav className="nav">
+          <i
+            className="fa fa-bars"
+            aria-hidden="true"
+            onClick={e => this.handleToggle(e)}
+          />
+          <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
+
+
+            <NavLink activeClassName="active" to="/">
+              <li>Home</li>
+            </NavLink>
+            <NavLink activeClassName="active" to="/Skills">
+              <li>skills</li>
+            </NavLink>
+            <NavLink activeClassName="active" to="/work">
+              <li>experience</li>
+            </NavLink>            
+           
+            {/* <NavLink activeClassName="active" to="/education">
+            <li>education</li>
+          </NavLink> */}
+            <NavLink activeClassName="active" to="/products">
+              <li>Contact Us</li>
+            </NavLink>
+          </ul>
+          <div id="hero-wave" class="css-1qmcrmh ehoxvtz0"><svg viewBox="0 0 1695 57" preserveAspectRatio="none"><path d="M0 23c135.4 19 289.6 28.5 462.5 28.5C721.9 51.5 936.7 1 1212.2 1 1395.8.9 1556.7 8.3 1695 23v34H0V23z" fill="rgba(255,255,255,1)" fill-rule="evenodd"></path></svg></div>
+        </nav>
+      </Navigation>
+    );
+  }
+}
+
 
 const Navigation = styled.header`
   width: 100%;
-  border-bottom: 10px solid #222;
+  
   z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0px 50px 0;
-  height: 140px;
+  height: 100px;
   //margin-bottom: 60px;
-  background-image: url('https://images.unsplash.com/photo-1500043204644-768d20653f32?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+  // background-image: url('https://images.unsplash.com/photo-1500043204644-768d20653f32?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+  background: radial-gradient( circle farthest-corner at 10% 20%,rgba(26,20,74,1) 0%,rgba(59,52,120,1) 100.2% );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   .logo a {
     font-size:xxx-large;
     padding-top: 33px;
@@ -166,62 +228,6 @@ const Navigation = styled.header`
     }
   }
 `;
-
-export default class NavBar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isExpanded: false
-    };
-  }
-  handleToggle(e) {
-    e.preventDefault();
-    this.setState({
-      isExpanded: !this.state.isExpanded
-    });
-  }
-
-  render() {
-    const { isExpanded } = this.state;
-
-    return (
-      <Navigation>
-        <div className="logo">
-          <Link to="/">
-            <p>Portfolio</p>
-
-          </Link>
-        </div>
-        <nav className="nav">
-          <i
-            className="fa fa-bars"
-            aria-hidden="true"
-            onClick={e => this.handleToggle(e)}
-          />
-          <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
-
-
-            <NavLink activeClassName="active" to="/blogs">
-              <li>blogs</li>
-            </NavLink>
-            <NavLink activeClassName="active" to="/work">
-              <li>experience</li>
-            </NavLink>            
-            <NavLink activeClassName="active" to="/Skills">
-              <li>skills</li>
-            </NavLink>
-            <NavLink activeClassName="active" to="/education">
-            <li>education</li>
-          </NavLink>
-            <NavLink activeClassName="active" to="/products">
-              <li>products</li>
-            </NavLink>
-          </ul>
-        </nav>
-      </Navigation>
-    );
-  }
-}
 
 
 
