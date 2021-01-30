@@ -1,20 +1,20 @@
-.footer__class{
-    background: radial-gradient( circle farthest-corner at 10% 20%,rgba(26,20,74,1) 0%,rgba(59,52,120,1) 100.2% );
+.footer__class {
+    background: radial-gradient(circle farthest-corner at 10% 20%, rgba(26, 20, 74, 1) 0%, rgba(59, 52, 120, 1) 100.2%);
     color: #fff;
     padding: 20px;
     text-align: center;
 }
-#contact-wave{
+
+#contact-wave {
     position: absolute;
     left: 0;
     width: 100%;
     z-index: 9999;
-    transform: rotate(
-180deg
-);
+    transform: rotate(180deg);
     margin-top: -24px;
 }
-.footer__content{
+
+.footer__content {
     padding-top: 80px;
     display: flex;
     flex-direction: inherit;

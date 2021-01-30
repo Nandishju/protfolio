@@ -1,41 +1,64 @@
 import react from 'react';
+import { Card, Col, Container, Row } from 'react-bootstrap';
+import { skillsData, bdSkills, blSkils, misc } from '../components/data/data.js'
 require('./skills.scss');
-const skillsData = [{
-  "name": "HTML",
-  "classWord": "html",
-  "rating": "90%"
-},
-{
-  "name": "Css",
-  "classWord": "css",
-  "rating": "70%"
-}, {
-  "name": "Javascript",
-  "classWord": "js",
-  "rating": "70%"
-},
-{
-  "name": "React",
-  "classWord": "react",
-  "rating": "80%"
-},
-{
-  "name": "Redux",
-  "classWord": "redux",
-  "rating": "50%"
-}]
+const generateBgColor = () => {
+    const hashLetters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
+    const generateSingle = () => hashLetters[Math.ceil(Math.random() * (hashLetters.length - 1))];
+    let hashCode = "#";
+    for (let i = 0; i < 6; i++) {
+        hashCode = hashCode.concat(generateSingle())
+    }
+    return hashCode;
+
+}
 export const Skills = (props) => {
-  return (<div className="container skills-page">
-    <div className="content">
-      <h1>My Skills</h1>
-      {skillsData.map(item => {
-        return (<><h4>{item.name}</h4>
-          <div className="skill-container">
-            <div className={`skills ${item.classWord}`}>{item.rating}
-            </div>
-          </div>
-        </>)
-      })}
+    const skillsDataSet = [{
+        groupName: "Frontend",
+        data: skillsData
+    }, {
+        groupName: "Database",
+        data: bdSkills
+    }, {
+        groupName: "Business logic technologies",
+        data: blSkils
+    }]
+    return (<div className="min_height_Xpx skills-page">
+        <div className="content">
+            <h1>My Skills</h1>
+            <Container className="skils_container">
+                <Row>
+                    {skillsDataSet.map(skillGrp => {
+                        return (<Col xs={12} sm={12} md={6} lg={4} className={"skills_grp"}>
+                            <h3 className="border_btm_2p_solid_black">{skillGrp.groupName}</h3> {skillGrp.data.map(item => {
+                                return (<div><h5>{item.name}</h5>
+                                    <div className="skill-container">
+                                        <div className={`skills`} style={{ width: `${item.rating}`, backgroundColor: `${generateBgColor()}` }}>
+                                            {item.rating}
+                                        </div>
+                                    </div>
+                                </div>)
+                            })}
+                        </Col>
+                        )
+                    })
+                    }
+                </Row>
+                <Row style={{ marginTop: '30px', marginLeft: "30px" }}>
+                    <h5>Others:</h5>
+                    <div style={{
+                        width: "90%", "textAlign": "center",
+                        "display": "flex", " flexDirection": "row", "flexWrap": "wrap",
+                        "justifyContent": "space-evenly",
+                    }} >
+                        {misc.map(x => (<div className="misc_skills">
+                            {x.name}
+                        </div>))}
+                    </div>
+                </Row>
+            </Container>
+
+        </div>
     </div>
-  </div>)
+    )
 }
