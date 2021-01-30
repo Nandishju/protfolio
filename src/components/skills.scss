@@ -1,0 +1,43 @@
+.skills-page {
+    margin-left: 20%;
+    max-width: 60%;
+   
+   
+    .skill-container {
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: #ddd;
+    }
+    .skills {
+        text-align: right;
+        padding: 5px 10px;
+        color: white;
+        animation: loadSkills 3s 0s;
+    }
+    @keyframes loadSkills {
+        from {
+            width: 0%;
+        }
+    }
+    .html {
+        width: 90%;
+        background-color: green;
+    }
+    .css {
+        width: 70%;
+        background-color: rgb(212, 50, 85);
+    }
+    .js {
+        width: 70%;
+        background-color: yellow;
+    }
+    .react {
+        width: 80%;
+        background-color: skyblue;
+    }
+    .redux {
+        width: 50%;
+        background-color: #8a1fe2;
+    }
+}
