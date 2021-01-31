@@ -1,18 +1,5 @@
 import React from 'react';
 require('./education.scss')
-// export const Education = (props) => {
-//     return (<div className="education-page">
-//         <div className="content">
-//             <h1>Education Details</h1>
-
-//         </div>
-//     </div>)
-// }
-/**
-Welcome! This Pen has been updated with ES6 goodness and cleaner code. 
-https://codepen.io/nevernotsean/pen/QodqGj
-*/
-
 class ProjectList extends React.Component {
     createProjectListItem(project) {
         let byline = project.acf.project_byline
@@ -56,8 +43,8 @@ class ProjectCategory extends React.Component {
                 {
                     "project_byline": "ut ullamco sunt",
                     "project_credits": [{ "credit_role": "ut", "credit_name": "Leann" },
-                        { "credit_role": "aliquip", "credit_name": "Hernandez" },
-                        { "credit_role": "consequat", "credit_name": "Ashlee" }],
+                    { "credit_role": "aliquip", "credit_name": "Hernandez" },
+                    { "credit_role": "consequat", "credit_name": "Ashlee" }],
                     "project_description": "Enim est qui Lorem officia adipisicing irure minim. Eu enim fugiat cupidatat elit anim pariatur irure quis aute velit enim. Adipisicing consequat sunt eiusmod reprehenderit nisi fugiat esse ut. Consequat ea ad deserunt mollit quis labore Lorem do qui officia labore. Incididunt reprehenderit anim sunt velit sunt est sit anim.",
                     "project_client": "pariatur",
                     "project_thumbnail": "https://unsplash.it/1000/1000", "project_category": "aute"
@@ -105,7 +92,7 @@ class ProjectCategory extends React.Component {
             (active ? " isActive" : "") +
             (isLast ? " isLast" : "") +
             (shiftLeft ? " shiftLeft" : "");
-            //classNames({ category: true, isActive: active, isLast, shiftLeft })
+        //classNames({ category: true, isActive: active, isLast, shiftLeft })
         return (
             <li
                 className={classes}
@@ -195,13 +182,13 @@ export class Education extends React.Component {
         // })
         return (
             <div className="education">
-            <div className={this.state.open ? 'categories--menu-container focused ' : ' categories--menu-container '
-                // + classes
-            } onClick={this._focusOff} style={{ height: window.innerHeight }}>
-                <ul className="categories menu">
-                    {catNodes}
-                </ul>
-            </div></div>
+                <div className={this.state.open ? 'categories--menu-container focused ' : ' categories--menu-container '
+                    // + classes
+                } onClick={this._focusOff} style={{ height: window.innerHeight }}>
+                    <ul className="categories menu">
+                        {catNodes}
+                    </ul>
+                </div></div>
         )
     }
 }
