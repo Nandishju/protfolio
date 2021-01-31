@@ -1,6 +1,6 @@
 import react from 'react';
 import { Row, Col, Container, Image } from 'react-bootstrap';
-import { CalendarOutlined, PhoneOutlined, MailOutlined, HomeOutlined, GithubOutlined,FacebookFilled,InstagramFilled, LinkedinFilled } from '@ant-design/icons';
+import { CalendarOutlined, PhoneOutlined, MailOutlined, HomeOutlined, GithubOutlined, FacebookFilled, InstagramFilled, LinkedinFilled } from '@ant-design/icons';
 import { aboutMe } from '../components/data/data';
 import './home.scss'
 
@@ -56,18 +56,10 @@ export const Home = (props) => {
                             </li>
                         </ul>
                         <ul class="list personal_social">
-                        <li>
-                                <a href="#">
-                                    <LinkedinFilled className="linkedin_color" title="LinkedIn"></LinkedinFilled>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Facebook"><FacebookFilled style={{color: 'rgb(24, 119, 242)' }}  className="facebook_color"/></a>
-                            </li>
-                            <li>
-                                <a href="#" title="Instagram"><InstagramFilled className="insta_color" /></a>
-                            </li>
-                           
+                            <li>  <a href={aboutMe.linkedIn ? aboutMe.linkedIn : "#"} target="blank"> <LinkedinFilled className="linkedin_color" title="LinkedIn"></LinkedinFilled> </a>  </li>
+                            <li>  <a href={aboutMe.facebook ? aboutMe.facebook : "#"} title="Facebook" target="blank"><FacebookFilled style={{ color: 'rgb(24, 119, 242)' }} className="facebook_color" /></a>  </li>
+                            <li>   <a href={aboutMe.insta ? aboutMe.insta : "#"} title="Instagram" target="blank"><InstagramFilled className="insta_color" /></a> </li>
+
                         </ul>
                     </Col>
                 </Row>

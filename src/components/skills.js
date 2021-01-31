@@ -1,5 +1,5 @@
 import react from 'react';
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { skillsData, bdSkills, blSkils, misc } from '../components/data/data.js'
 require('./skills.scss');
 const generateBgColor = () => {
