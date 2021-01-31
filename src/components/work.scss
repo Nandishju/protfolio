@@ -1,0 +1,18 @@
+.work {
+    margin: 30px;
+
+    .vertical-timeline::before {
+        background: radial-gradient(circle farthest-corner at 10% 20%, rgba(26, 20, 74, 1) 0%, rgba(59, 52, 120, 1) 100.2%);
+
+    }
+
+    .vertical-timeline-element-icon {
+        box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(59, 52, 120, 1), 0 3px 0 4px rgba(26, 20, 74, 1);
+    }
+
+    .vertical-timeline-element:last-child {
+        .vertical-timeline-element-icon {
+            box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0, 0, 0, .08), 0 3px 0 4px rgba(0, 0, 0, .05);
+        }
+    }
+}

@@ -6,18 +6,19 @@ import {
   Link
 } from "react-router-dom";
 import { About } from '../about'
-import { Blogs } from '../blogs'
+import { Home } from '../home'
 import { Skills } from '../skills'
 import { Products } from '../products'
 import { Work } from '../work'
-import {Education } from '../education'
-export const RoutesComp =(props)=>{
-return(<> 
-{/* <Route exact={true} path="/" component={About} /> */}
-<Route exact path="/work" component={Work} />
-<Route exact path="/skills" component={Skills} />
-  <Route exact path="/" component={Blogs} />
-  <Route exact path="/education" component={Education}/>
-<Route exact path="/products" component={Products}/></>)
+import { Education } from '../education'
+import { Contact } from '../contact'
+export const RoutesComp = (props) => {
+  return (<>
+    {/* <Route exact={true} path="/" component={About} /> */}
+    <Route exact path="/" component={Home} />
+    <Route exact path="/work" component={Work} />
+    <Route exact path="/skills" component={Skills} />
+
+    <Route exact path="/education" component={Education} />
+    <Route exact path="/contact" component={Contact} /></>)
 }
- 

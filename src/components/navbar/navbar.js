@@ -41,22 +41,13 @@ export default class NavBar extends React.Component {
             onClick={e => this.handleToggle(e)}
           />
           <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
-
-
-            <NavLink activeClassName="active" to="/">
-              <li>Home</li>
+            <NavLink activeClassName="active" to="/work">
+              <li>Work & Education</li>
             </NavLink>
             <NavLink activeClassName="active" to="/Skills">
               <li>skills</li>
             </NavLink>
-            <NavLink activeClassName="active" to="/work">
-              <li>experience</li>
-            </NavLink>            
-           
-            {/* <NavLink activeClassName="active" to="/education">
-            <li>education</li>
-          </NavLink> */}
-            <NavLink activeClassName="active" to="/products">
+            <NavLink activeClassName="active" to="/contact">
               <li>Contact Us</li>
             </NavLink>
           </ul>
