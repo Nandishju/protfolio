@@ -22,7 +22,7 @@ export const Blogs = (props)=>{
               <h1>Nandish J U</h1>
               <p> UI DEVELOPER</p>
               <p>You will begin to realise why this exercise is called the Dickens Pattern (with reference to the ghost showing Scrooge some different futures)</p>
-              <ul class="list basic_info">
+              <ul className="list basic_info">
                 <li>
                   <a href="#"><CalendarOutlined />
                   <span className="ul__list__content">31st December, 1992</span></a>

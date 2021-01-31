@@ -143,5 +143,16 @@ export const aboutMe = {
     "dob": "31st December, 1992",
     "phoneNum": "44 (012) 6954 783",
     "mail": "test.test@test.com",
-    "currentLoc": "Santa monica bullevard"
+    "currentLoc": "Santa monica bullevard",
+    "gitHub": "https://github.com/Nandishju"
+}
+
+export const contactUs = {
+    "address1" : "Shiva Layout, Taralubalu Nagar",
+    "address2" : "Chitradurga - 577502",
+    "phoneno" : "+91 - 8197763923",
+    "time": "Mon to Fri 9am to 6 pm",
+    "email" : "ju.nandish903@gmail.com",
+    "content" : "Send us your query anytime!",
+    "gitHub": "https://github.com/Nandishju"
 }
