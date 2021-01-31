@@ -47,7 +47,7 @@ export default class NavBar extends React.Component {
             <NavLink activeClassName="active" to="/Skills">
               <li>skills</li>
             </NavLink>
-            <NavLink activeClassName="active" to="/products">
+            <NavLink activeClassName="active" to="/contact">
               <li>Contact Us</li>
             </NavLink>
           </ul>

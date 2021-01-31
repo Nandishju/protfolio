@@ -11,6 +11,7 @@ import { Skills } from '../skills'
 import { Products } from '../products'
 import { Work } from '../work'
 import { Education } from '../education'
+import { Contact } from '../contact'
 export const RoutesComp = (props) => {
   return (<>
     {/* <Route exact={true} path="/" component={About} /> */}
@@ -19,5 +20,5 @@ export const RoutesComp = (props) => {
     <Route exact path="/skills" component={Skills} />
 
     <Route exact path="/education" component={Education} />
-    <Route exact path="/products" component={Products} /></>)
+    <Route exact path="/contact" component={Contact} /></>)
 }

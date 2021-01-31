@@ -40,7 +40,7 @@ export default class ScrollToTop extends Component {
       <div className="scroll-to-top">
         {is_visible && (
           <div onClick={() => this.scrollToTop()} >
-          <i class="fas fa-arrow-circle-up fa-2x "></i>
+          <i className="fas fa-arrow-circle-up fa-2x "></i>
            </div>
         )}
       </div>
