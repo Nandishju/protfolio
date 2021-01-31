@@ -2,12 +2,6 @@ import React, { Component } from "react";
 import { NavLink, Link } from "react-router-dom";
 
 import styled from "styled-components";
-// import { About } from '../about';
-// import { Blogs } from '../blogs';
-// import { Skills } from '../Skills';
-// import { Products } from '../products';
-// import { Work } from '../work';
-import './navbar.scss'
 
 export default class NavBar extends React.Component {
   constructor(props) {
