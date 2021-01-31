@@ -2,7 +2,7 @@ export const skillsDataOwner1 = { //SL
     "skillsData": [{
         "name": "HTML",
         "classWord": "html",
-        "rating": "90%"
+        "rating": "75%"
     },
     {
         "name": "Css",
@@ -16,7 +16,7 @@ export const skillsDataOwner1 = { //SL
     {
         "name": "React",
         "classWord": "react",
-        "rating": "85%"
+        "rating": "80%"
     },
     {
         "name": "Redux",
@@ -45,11 +45,11 @@ export const skillsDataOwner1 = { //SL
     "blSkils": [
         {
             "name": "Java 7",
-            "rating": "60%"
+            "rating": "50%"
         },
         {
             "name": "C#",
-            "rating": "50%"
+            "rating": "40%"
         },
         {
             "name": "Node Js (Express App)",
@@ -57,7 +57,7 @@ export const skillsDataOwner1 = { //SL
         },
         {
             "name": "MVC architecture",
-            "rating": "70%"
+            "rating": "65%"
         }],
     "misc": [
         {
