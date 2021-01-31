@@ -139,7 +139,7 @@ export const skillsDataOwner1 = { //SL
         "myImg": "https://instagram.fhyd12-1.fna.fbcdn.net/v/t51.2885-19/s320x320/33703133_2026755090986361_6949113766164299776_n.jpg?_nc_ht=instagram.fhyd12-1.fna.fbcdn.net&_nc_ohc=keLIi1_WFHYAX8BWGGC&tp=1&oh=2e43433a942b5c183bb3a22e59f031f7&oe=60409ECD",
         "name": "Lavanya Cheemakurthy S",
         "role": "Frontend Developer",
-        "notes": "I insipre by seeing any type of creative work and will always try to make things around me more exciting to have a deep learning!!",
+        "notes": "I get inspired by seeing any type of creative work and will always try to make things around me more exciting to have a deep learning!!",
         "dob": "Nov 6th 95",
         "phoneNum": "(+91) XXXXXX3849",
         "mail": "cheemakurthysailavanya@gmail.com",
