@@ -1,54 +1,58 @@
 export const skillsDataOwner1 = { //SL
-    "skillsData": [{
-        "name": "HTML",
-        "classWord": "html",
-        "rating": "75%"
-    },
-    {
-        "name": "Css",
-        "classWord": "css",
-        "rating": "70%"
-    }, {
+    "skillsData": [, {
         "name": "Javascript",
         "classWord": "js",
         "rating": "70%"
     },
-    {
-        "name": "React",
-        "classWord": "react",
-        "rating": "80%"
-    },
-    {
-        "name": "Redux",
-        "classWord": "redux",
-        "rating": "50%"
-    },],
-    "bdSkills": [
         {
-            "name": "DBMS Concepts",
-            "rating": "60%"
+            "name": "React",
+            "classWord": "react",
+            "rating": "80%"
         },
         {
-            "name": "SQL/Oracle",
+            "name": "Redux",
+            "classWord": "redux",
+            "rating": "50%"
+        },
+        {
+            "name": 'Typescript',
+            "classWord": "ts",
+            "rating": "50%"
+        },
+        {
+            "name": "HTML",
+            "classWord": "html",
+            "rating": "75%"
+        },
+        {
+            "name": "Css",
+            "classWord": "css",
+            "rating": "70%"
+        }],
+    "bdSkills": [
+        {
+            "name": "SQL",
             "rating": "35%"
         }
         ,
         {
-            "name": "SSIS",
+            "name": "Mongo db",
             "rating": "30%"
+        }, {
+            "name": "SSIS basics",
+            "rating": "30%"
+        }, {
+            "name": "DBMS Concepts",
+            "rating": "60%"
         },
-        {
-            "name": "Mongoose",
-            "rating": "30%"
-        }
     ],
     "blSkils": [
         {
-            "name": "Java 7",
+            "name": "Java SE",
             "rating": "50%"
         },
         {
-            "name": "C#",
+            "name": "C# basics",
             "rating": "40%"
         },
         {
@@ -64,16 +68,13 @@ export const skillsDataOwner1 = { //SL
             "name": "Jira",
         },
         {
+            "name": "Git"
+        },
+        {
             "name": "Rally"
         },
         {
             "name": "Agile"
-        },
-        {
-            "name": "Bit bucket"
-        },
-        {
-            "name": "Git hub"
         }
     ],
     "workAndEdu": [{
@@ -136,7 +137,7 @@ export const skillsDataOwner1 = { //SL
     }
     ],
     "aboutMe": {
-        "myImg": "https://instagram.fhyd14-1.fna.fbcdn.net/v/t51.2885-19/s320x320/33703133_2026755090986361_6949113766164299776_n.jpg?tp=1&_nc_ht=instagram.fhyd14-1.fna.fbcdn.net&_nc_ohc=NE-04jkIfB8AX9teLTW&edm=ABfd0MgBAAAA&ccb=7-4&oh=6303eb0df2e0433933c30ab8b4f7b15f&oe=60CB0C4D&_nc_sid=7bff83",
+        "myImg": "LAV_IMG",
         "name": "Lavanya Cheemakurthy S",
         "role": "Frontend Developer",
         "notes": "I get inspired by seeing any type of creative work and will always try to make things around me more exciting to have a deep learning!!",
@@ -148,7 +149,7 @@ export const skillsDataOwner1 = { //SL
         "address1": "A S Rao st, Laxminagar",
         "address2": "Vijayawada - 520011",
         "gitHub": "https://github.com/LavanyaChs",
-        "linkedIn": "https://www.linkedin.com/in/sai-lavanya-cheemakurthy-85a094114/",
+        "linkedIn": "https://linkedin.com/in/lavanya-ch-s-85a094114/",
         "facebook": "https://www.facebook.com/lavanya.cheemakurthy/",
         "insta": "https://www.instagram.com/lavanyacheemakurthy/",
         "content": "Send me your query anytime!",

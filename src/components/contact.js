@@ -30,29 +30,32 @@ export class Contact extends Component {
     return (
       // Important! Always set the container height explicitly
       <div>
-        <div className="box_1620">
-          <div className="banner_inner d-flex align-items-center">
-            <div className="container">
-              <div className="banner_content text-center">
-                <h2>Contact Me</h2>
+        {false &&
+          <div>
+            <div className="box_1620">
+              <div className="banner_inner d-flex align-items-center">
+                <div className="container">
+                  <div className="banner_content text-center">
+                    <h2>Contact Me</h2>
+                  </div>
+                </div>
               </div>
             </div>
+            <div style={{ height: '100vh', width: '100%' }} className="container map">
+              {<GoogleMapReact
+                defaultCenter={this.props.center}
+                defaultZoom={this.props.zoom}
+              >
+                <AnyReactComponent
+                  lat={27.2046}
+                  lng={77.4977}
+                  text="I am here"
+                />
+              </GoogleMapReact>
+              }
+            </div>
           </div>
-        </div>
-        <div style={{ height: '100vh', width: '100%' }} className="container map">
-      {false && <GoogleMapReact
-            defaultCenter={this.props.center}
-            defaultZoom={this.props.zoom}
-          >
-            <AnyReactComponent
-              lat={27.2046}
-              lng={77.4977}
-              text="I am here"
-            />
-          </GoogleMapReact>
-      }
-        </div>
-        <div className="container">
+        }  <div className="container">
           <div className="row">
             <div className="col-lg-4">
               <div class="contact_info">

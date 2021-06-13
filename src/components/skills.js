@@ -28,7 +28,7 @@ export const Skills = (props) => {
             <h1>My Skills</h1>
             <Container className="skils_container">
                 <Row>
-                    {skillsDataSet.map(skillGrp => {
+                    {false && skillsDataSet.map(skillGrp => {
                         return (<Col xs={12} sm={12} md={6} lg={4} className={"skills_grp"}>
                             <h3 className="border_btm_2p_solid_black">{skillGrp.groupName}</h3> {skillGrp.data.map(item => {
                                 return (<div><h5>{item.name}</h5>
@@ -43,11 +43,27 @@ export const Skills = (props) => {
                         )
                     })
                     }
+                    {skillsDataSet.map(skillGrp => {
+                        return (<div className='skills_grp'>
+                            <h3 className="border_btm_2p_solid_black">{skillGrp.groupName}</h3>
+                            <div className='skills_flex_container '>
+                                {skillGrp.data.map((item, index) => {
+                                    return (<div className={`  skills_flex_item item_${index} skills`} style={{
+                                        backgroundColor: `${generateBgColor()}`
+                                    }} onClick={(e) => { alert('Comming soon') }}>
+                                        {item.name}
+                                    </div>)
+                                })}
+                            </div>
+                        </div>)
+                    })}
                 </Row>
                 <Row style={{ marginTop: '30px', marginLeft: "30px" }}>
-                    <h5>Others:</h5>
+                    <h5>Software process / Version control :</h5>
                     <div style={{
-                        width: "90%", "textAlign": "center",
+                        // width: "90%",
+                        "margin": "0px 5px",
+                        "textAlign": "center",
                         "display": "flex", " flexDirection": "row", "flexWrap": "wrap",
                         "justifyContent": "space-evenly",
                     }} >

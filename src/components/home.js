@@ -3,7 +3,7 @@ import { Row, Col, Container, Image } from 'react-bootstrap';
 import { CalendarOutlined, PhoneOutlined, MailOutlined, HomeOutlined, GithubOutlined, FacebookFilled, InstagramFilled, LinkedinFilled } from '@ant-design/icons';
 import { aboutMe } from '../components/data/data';
 import './home.scss'
-
+import lavImg from '../static/images/lav.jpg'
 export const Home = (props) => {
     return (
         <div className="min_height_Xpx">
@@ -14,8 +14,8 @@ export const Home = (props) => {
                             width={1000}
                             height={64}
                             className="mr-3"
-                            src={aboutMe.myImg}
-                            alt="Generic placeholder"
+                            src={aboutMe.myImg === 'LAV_IMG' ? lavImg : ''}
+                            alt="Lavanya Ch S"
                         />
                     </Col>
                     <Col>
