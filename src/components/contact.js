@@ -34,13 +34,13 @@ export class Contact extends Component {
           <div className="banner_inner d-flex align-items-center">
             <div className="container">
               <div className="banner_content text-center">
-                <h2>Contact Us</h2>
+                <h2>Contact Me</h2>
               </div>
             </div>
           </div>
         </div>
         <div style={{ height: '100vh', width: '100%' }} className="container map">
-          <GoogleMapReact
+      {false && <GoogleMapReact
             defaultCenter={this.props.center}
             defaultZoom={this.props.zoom}
           >
@@ -50,6 +50,7 @@ export class Contact extends Component {
               text="I am here"
             />
           </GoogleMapReact>
+      }
         </div>
         <div className="container">
           <div className="row">
