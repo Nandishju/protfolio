@@ -59,6 +59,7 @@ export class Contact extends Component {
           <div className="row">
             <div className="col-lg-4">
               <div class="contact_info">
+                <h2>Contact Me</h2>
                 <div class="info_item">
                   <HomeOutlined className="ant__icons"></HomeOutlined>
                   <h6>{aboutMe.address1}</h6>
